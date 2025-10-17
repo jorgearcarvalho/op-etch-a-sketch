@@ -1,11 +1,14 @@
 const container = document.querySelector('#container');
 
 const button = document.querySelector("#button");
-button.style["margin"]="20px 300px";
+const randomColorButton = document.querySelector(".randomColor");
+
+staticColor = true;
 
 function makeGrid(squaresPerSide) {
     container.innerHTML = "";
-    let size = 640 / squaresPerSide; 
+    
+    size = (700 / squaresPerSide);
 
     for (let i = 0; i < (squaresPerSide ** 2); i++) {
         const square = document.createElement("div");
@@ -15,7 +18,10 @@ function makeGrid(squaresPerSide) {
         square.style.height = `${size}px`;
 
         square.addEventListener("mouseover", () => {
-          square.style.backgroundColor = "purple";
+          if (!square.style.backgroundColor) {
+            const randomColor = Math.floor(Math.random()*16777215).toString(16);
+            square.style.backgroundColor = "#"+randomColor;
+          }
         });
 
         container.appendChild(square);
@@ -24,11 +30,11 @@ function makeGrid(squaresPerSide) {
 }
 
 button.addEventListener("click", () => {
-      let num = parseInt(prompt("How many squares per side? (max: 100)", "16"));
-      if (isNaN(num) || num < 1) num = 16;
+      let num = parseInt(prompt("How many squares per side? (max: 100)", "30"));
+      if (isNaN(num) || num < 1) num = 30;
       if (num > 100) num = 100;
       makeGrid(num);
     });
 
-// Create default 16x16 grid
-makeGrid(16);
+// Create default 30x30 grid
+makeGrid(30);
