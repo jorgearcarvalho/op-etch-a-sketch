@@ -5,4 +5,4 @@ It's main purpouse was to develop skills on dinamically inserting CSS properties
 
 ## See it for yourself :)
 
-https://github.com/jorgearcarvalho/op-etch-a-sketch
+https://jorgearcarvalho.github.io/op-etch-a-sketch/
