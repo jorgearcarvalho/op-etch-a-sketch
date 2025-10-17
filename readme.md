@@ -4,3 +4,5 @@ This simple project was designed for an exercise on The Odin's Project on how to
 It's main purpouse was to develop skills on dinamically inserting CSS properties through javascript.
 
 ## See it for yourself :)
+
+https://github.com/jorgearcarvalho/op-etch-a-sketch
